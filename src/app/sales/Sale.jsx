@@ -17,7 +17,7 @@ function Sale(props) {
         className="text-red-950 font-bold hover:uppercase"
         href={`/sales/${props.id}`}
       >
-        Ver clientes
+        Ver cliente
       </Link>
       <Link
         className="text-red-950 font-bold hover:uppercase"

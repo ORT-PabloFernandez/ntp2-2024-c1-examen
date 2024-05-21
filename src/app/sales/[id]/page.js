@@ -38,12 +38,15 @@ export default function pageCustomerDetails({ params }) {
     return (
         <div className="flex flex-col justify-center items-center bg-slate-400 min-h-screen">
             {customer ? (
-                <Customer
-                    email={customer.email}
-                    age={customer.age}
-                    satisfaction={customer.satisfaction}
-                    gender={customer.gender}
-                />
+                <div>
+                    <h1 className='p-3 text-center uppercase'>cliente</h1>
+                    <Customer
+                        email={customer.email}
+                        age={customer.age}
+                        satisfaction={customer.satisfaction}
+                        gender={customer.gender}
+                    />
+                </div>
             ) : (
                 <div>No customer found</div>
             )}
