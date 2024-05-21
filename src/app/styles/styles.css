@@ -1,0 +1,95 @@
+/* Estilos generales para el contenedor de la lista */
+ul.sales-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+/* Estilos para cada elemento de la lista */
+.sale-item {
+  flex: 1 1 calc(25% - 20px);
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.sale-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sale-date,
+.store-location,
+.purchase-method {
+  display: block;
+  margin: 5px 0;
+  font-family: Arial, sans-serif;
+}
+
+.sale-date {
+  font-weight: bold;
+  color: #333;
+}
+
+.store-location {
+  font-style: italic;
+  color: #555;
+}
+
+.purchase-method {
+  color: #888;
+}
+
+/* Estilos para el contenedor de detalles de la compra */
+.purchase-details {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.purchase-details .section {
+  margin-bottom: 20px;
+}
+
+.purchase-details .section-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.buyer-info span {
+  display: block;
+  margin: 5px 0;
+}
+
+.purchase-details .product-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.purchase-details .product-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.purchase-details .product-list li:last-child {
+  border-bottom: none;
+}
+
+.product-name,
+.product-price,
+.product-quantity {
+  color: #000;
+  display: block;
+  margin: 3px 0;
+}
