@@ -1,28 +1,29 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import Customer from "../Customer/Customer";
-
-export default function pageCustomerDetails({ params }) {
-  const [sale, setSale] = useState([]);
-  const [customer, setCustomer] = useState(null);
+export default function PageClienteDetail({ params }) {
   const { id } = params;
 
+  const [saleDetail, setSale] = useState({});
+
   useEffect(() => {
-    fetch(
-      "https://salesbackend.azurewebsites.net/api/sales?pageSize=100&page=1"
-    )
+    fetch(`https://salesbackend.azurewebsites.net/api/sales?id=${id}`)
       .then((response) => response.json())
       .then((data) => {
-        setSale(data.find((sale) => sale._id === id));
-        if (sale) {
-          setCustomer(sale.customer);
-        }
-      });
+        setSale(data);
+      })
+      .catch((error) => console.log(error));
   }, [id]);
 
   return (
-    <div>
-      <Customer customer={customer} />
-    </div>
+    <>
+      <Customer
+        gender={saleDetail.gender}
+        age={saleDetail.age}
+        email={saleDetail.email}
+        satisfaction={saleDetail.satisfaction}
+      />
+    </>
   );
 }
