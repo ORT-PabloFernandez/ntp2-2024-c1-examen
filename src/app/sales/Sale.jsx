@@ -10,7 +10,12 @@ function Sale(props) {
       <Link className="text-red-950 font-bold" href={`/sales/${props.id}`}>
         Ver clientes
       </Link>
-      
+      <Link
+        className="text-red-950 font-bold"
+        href={`/sales/products/${props.id}`}
+      >
+        Ver productos
+      </Link>
     </div>
   );
 }
