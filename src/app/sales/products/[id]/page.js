@@ -39,18 +39,21 @@ export default function pageProductsDetails({ params }) {
 
 
     return (
-        <div>
-            {product &&
-                product.map((item, index) => (
-                    <Product
-                        key={index}
-                        name={item.name}
-                        quantity={item.quantity}
-                        price={parseFloat(item.price.$numberDecimal)}
-                    />
-                ))
-            }
-            <Link href="/">Volver</Link>
-        </div>
+        <section>
+            <div className="grid grid-cols-3 gap-4 place-content-center">
+                {product &&
+                    product.map((item, index) => (
+                        <Product
+                            key={index}
+                            name={item.name}
+                            quantity={item.quantity}
+                            price={parseFloat(item.price.$numberDecimal)}
+                        />
+                    ))
+                }
+
+            </div>
+            <Link className='p-3 m-3 uppercase hover:text-yellow-500' href="/">Volver</Link>
+        </section>
     )
 }

@@ -10,7 +10,7 @@ export function SalesProvider({ children }) {
     let fetchSales = async () => {
       try {
         const res = await fetch(
-          "https://salesbackend.azurewebsites.net/api/sales?pageSize=12&page=12"
+          "https://salesbackend.azurewebsites.net/api/sales?pageSize=100&page=1"
         );
 
         if (!res.ok) {

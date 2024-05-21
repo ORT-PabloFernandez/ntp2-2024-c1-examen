@@ -36,7 +36,7 @@ export default function pageCustomerDetails({ params }) {
     }, [id, sales]);
 
     return (
-        <div>
+        <div className="flex flex-col justify-center items-center bg-slate-400 min-h-screen">
             {customer ? (
                 <Customer
                     email={customer.email}
@@ -47,7 +47,7 @@ export default function pageCustomerDetails({ params }) {
             ) : (
                 <div>No customer found</div>
             )}
-            <Link href="/">Volver</Link>
+            <Link className='p-3 uppercase hover:text-yellow-500' href="/">Volver</Link>
         </div>
     );
 }
