@@ -1,0 +1,86 @@
+.customer {
+  background-color: #7c6c66;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-left: 20px; 
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; 
+  color: #fff;
+}
+
+.customer:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #bb8168; 
+}
+
+.customer h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.customer h2, .customer h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.customer h5:last-child {
+  margin-bottom: 20px;
+}
+
+.customer button {
+  background-color:#b89e94;;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.customer button:hover {
+  background-color: #a94f30;
+}
+
+.customer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.customer-list li {
+  width: calc(25% - 20px);
+  margin-bottom: 40px;
+}
+
+.account-link {
+  transition: color 0.3s ease; 
+}
+
+.account-link:hover {
+  color: #c9411b; 
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.pagination-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.pagination-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
